@@ -26,18 +26,18 @@ public abstract class Item {
 	public int getSellIn() {
 		return Integer.valueOf(this.sellIn);
 	}
-
-	public boolean isQualityHigherThan(int quality) {
-		return this.quality > quality;
-	}
-
-	public boolean isQualityLowerThan(int quality) {
-		return this.quality < quality;
-	}
-
+	
 	@Override
 	public String toString() {
 		return this.name + ", " + this.sellIn + ", " + this.quality;
+	}
+
+	protected boolean isQualityHigherThan(int quality) {
+		return this.quality > quality;
+	}
+
+	protected boolean isQualityLowerThan(int quality) {
+		return this.quality < quality;
 	}
 	
 	protected abstract void normalizeQuality();

@@ -11,7 +11,8 @@ public class ItemFactory {
 	private static String[] maturedFoods = {"Aged Brie"};
 	private static String[] passes = {"Backstage passes to a TAFKAL80ETC concert"};
 	private static String[] legendaries = {"Sulfuras, Hand of Ragnaros"};
-	private static String[] conjurieds = {"Conjured Mana Cake"};
+	// TODO: Quando implementar regra de itens conjurados basta descomentar.
+	//private static String[] conjurieds = {"Conjured Mana Cake"};
 
 	public static Item buildItem(String name, int sellIn, int quality) {		
 		if (isMaturedFood(name)) {
@@ -50,7 +51,9 @@ public class ItemFactory {
 			}
 		}
 		return false;
-	}	
+	}
+	/*
+	 * TODO: Quando implementar regra de itens conjurados basta descomentar.
 	private static boolean isConjured(String name) {
 		for(String conjured : conjurieds) {
 			if(conjured.equalsIgnoreCase(name)) {
@@ -59,4 +62,5 @@ public class ItemFactory {
 		}
 		return false;
 	}
+	*/
 }
